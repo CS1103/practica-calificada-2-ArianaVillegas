@@ -9,19 +9,22 @@ class Defense{
 protected:
     int level;
 public:
-    Defense();
+    Defense(){};
     int defense(){ return level;};
 };
 
 class Elude:public Defense{
+public:
     Elude(){this->level=1;};
 };
 
 class Shield:public Defense{
+public:
     Shield(){this->level=4;};
 };
 
 class Armor:public Defense{
+public:
     Armor(){this->level=8;};
 };
 

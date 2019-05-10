@@ -111,6 +111,6 @@ void Arena::run(Fighter A, Fighter B) {
 
 void Arena::run_all() {
     for(int i=0; i<fights.size();i++){
-        run()
+        run(fights[i].GetA(),fights[i].GetB());
     }
 }

@@ -18,11 +18,13 @@ class Fight{
     int score;
 public:
     Fight(Fighter* A,Fighter* B):A(A),B(B),winner(nullptr),score(0){};
-    Fighter* GetA(){ return A;};
-    Fighter* GetB(){ return B;};
+    Fighter GetA(){ return *A;};
+    Fighter GetB(){ return *B;};
+    Fighter GetWinner(){ return *winner;};
+    int GetScore(){ return score;};
     void SetWinner(Fighter* winner1){winner=winner1;};
     void SetScore(int score1){score=score1;};
-    ~Fight(){delete A;delete B; delete winner;};
+    ~Fight(){};
 };
 
 class Arena{
