@@ -1,0 +1,3 @@
+/home/ariana/PRUEBAS/p2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ariana/PRUEBAS/p2/cmake-build-debug/CMakeFiles/PC2.dir
+/home/ariana/PRUEBAS/p2/cmake-build-debug/CMakeFiles/edit_cache.dir

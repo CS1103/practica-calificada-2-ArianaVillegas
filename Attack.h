@@ -9,8 +9,7 @@ class Attack{
 protected:
     int power;
 public:
-    Attack(){};
-    int attack() { return power;};
+    int attack(){ return power;};
 };
 
 class Punch:public Attack{

@@ -4,10 +4,34 @@
 
 #include "Fighter.h"
 
-int Fighter::defense() {
-    return std::accumulate(d.begin(),d.end(),0);
+void Fighter::add_defense(char ident) {
+    Defense* defense= nullptr;
+    switch (ident){
+        case 'E':
+            defense=new Elude();
+            break;
+        case 'S':
+            defense=new Shield();
+            break;
+        case 'A':
+            defense=new Armor();
+            break;
+    }
+    defensepoints+=defense->defense();
 }
 
-int Fighter::attack() {
-    return std::accumulate(a.begin(),a.end(),0);
+void Fighter::add_attack(char ident) {
+    Attack* attack= nullptr;
+    switch (ident){
+        case 'P':
+            attack=new Punch();
+            break;
+        case 'S':
+            attack=new Saber();
+            break;
+        case 'F':
+            attack=new Firearm();
+            break;
+    }
+    attackpoints+=attack->attack();
 }

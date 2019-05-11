@@ -9,7 +9,6 @@ class Defense{
 protected:
     int level;
 public:
-    Defense(){};
     int defense(){ return level;};
 };
 

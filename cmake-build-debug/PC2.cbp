@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="PC2"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ariana/PRUEBAS/p2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/ariana/PRUEBAS/p2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PC2">
+				<Option output="/home/ariana/PRUEBAS/p2/cmake-build-debug/PC2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ariana/PRUEBAS/p2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 PC2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PC2/fast">
+				<Option output="/home/ariana/PRUEBAS/p2/cmake-build-debug/PC2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ariana/PRUEBAS/p2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 PC2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/ariana/PRUEBAS/p2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ariana/PRUEBAS/p2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ariana/PRUEBAS/p2/Arena.cpp">
+			<Option target="PC2"/>
+		</Unit>
+		<Unit filename="/home/ariana/PRUEBAS/p2/Arena.h">
+			<Option target="PC2"/>
+		</Unit>
+		<Unit filename="/home/ariana/PRUEBAS/p2/Attack.h">
+			<Option target="PC2"/>
+		</Unit>
+		<Unit filename="/home/ariana/PRUEBAS/p2/Defense.h">
+			<Option target="PC2"/>
+		</Unit>
+		<Unit filename="/home/ariana/PRUEBAS/p2/Fighter.cpp">
+			<Option target="PC2"/>
+		</Unit>
+		<Unit filename="/home/ariana/PRUEBAS/p2/Fighter.h">
+			<Option target="PC2"/>
+		</Unit>
+		<Unit filename="/home/ariana/PRUEBAS/p2/Tester.h">
+			<Option target="PC2"/>
+		</Unit>
+		<Unit filename="/home/ariana/PRUEBAS/p2/main.cpp">
+			<Option target="PC2"/>
+		</Unit>
+		<Unit filename="/home/ariana/PRUEBAS/p2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -4,113 +4,60 @@
 
 #include "Arena.h"
 
-void Arena::add_fight(Fight f) {
-    fights.push_back(f);
+void Arena::Run(Fight &fight) {
+    int scoreA=fight.A->defense()-fight.B->attack();
+    int scoreB=fight.B->defense()-fight.A->attack();
+    if(scoreA>scoreB){
+        fight.winner=fight.A;
+        fight.score=scoreA;
+    }else if(scoreA<scoreB){
+        fight.winner=fight.B;
+        fight.score=scoreB;
+    }
+}
+
+void ReadFighter(std::ifstream* rfile,std::string line, Fighter* &A){
+    getline(*rfile, line);
+    line.pop_back();
+    if(line=="BL") {
+        A = new BruceLee();
+    }
+    else if(line=="CN")
+        A=new ChuckNorris();
+    else if(line=="JS")
+        A=new JasonStatham();
+    getline(*rfile,line);
+    line.pop_back();
+    for(int i=0; i<line.size();i+=3){
+        A->add_defense(line[i]);
+    }
+    getline(*rfile,line);
+    for(int i=0; i<line.size();i+=3){
+        A->add_attack(line[i]);
+    }
 }
 
 void Arena::load_fights(std::string filename) {
     std::ifstream rfile(filename);
-    std::string iden1, iden2;
-    std::vector<int> d1,d2,a1,a2;
+    std::vector<Fight> fights1;
     if(rfile.is_open()){
-        std::string line;
-        getline(rfile,line);
-        iden1=line;
-        getline(rfile,line);
-        std::istringstream sub1(line);
-        while (getline(sub1,line,',')){
-            if(line=="E"){
-                Elude e;
-                d1.push_back(e.defense());
-            }else{
-                if(line=="S"){
-                    Shield s;
-                    d1.push_back(s.defense());
-                }else{
-                    if(line=="A"){
-                        Armor a;
-                        d1.push_back(a.defense());
-                    }
-                }
-            }
-        }
-        getline(rfile,line);
-        std::istringstream sub2(line);
-        while (getline(sub2,line,',')){
-            if(line=="P"){
-                Punch p;
-                d1.push_back(p.attack());
-            }else{
-                if(line=="S"){
-                    Saber s;
-                    d1.push_back(s.attack());
-                }else{
-                    if(line=="F"){
-                        Firearm f;
-                        d1.push_back(f.attack());
-                    }
-                }
-            }
-        }
-        getline(rfile,line);
-        iden2=line;
-        getline(rfile,line);
-        std::istringstream sub3(line);
-        while (getline(sub3,line,',')){
-            if(line=="E"){
-                Elude e;
-                d1.push_back(e.defense());
-            }else{
-                if(line=="S"){
-                    Shield s;
-                    d1.push_back(s.defense());
-                }else{
-                    if(line=="A"){
-                        Armor a;
-                        d1.push_back(a.defense());
-                    }
-                }
-            }
-        }
-        getline(rfile,line);
-        std::istringstream sub4(line);
-        while (getline(sub4,line,',')){
-            if(line=="P"){
-                Punch p;
-                d1.push_back(p.attack());
-            }else{
-                if(line=="S"){
-                    Saber s;
-                    d1.push_back(s.attack());
-                }else{
-                    if(line=="F"){
-                        Firearm f;
-                        d1.push_back(f.attack());
-                    }
-                }
-            }
+        std::string line,part;
+        while(!rfile.eof()) {
+            Fight* f=new Fight();
+            Fighter* A= nullptr;
+            Fighter* B= nullptr;
+            ReadFighter(&rfile,line,A);
+            ReadFighter(&rfile,line,B);
+            f->A=A;
+            f->B=B;
+            fights.push_back(f);
         }
     }
     rfile.close();
 }
 
-void Arena::run(Fighter A, Fighter B) {
-    Fight f(&A,&B);
-    int scorea=A.defense()-B.attack();
-    int scoreb=B.defense()-A.attack();
-    if(scorea>scoreb) {
-        f.SetScore(scorea);
-        f.SetWinner(&A);
-    }else{
-        if(scorea>scoreb){
-            f.SetScore(scoreb);
-            f.SetWinner(&B);
-        }
-    }
-}
-
-void Arena::run_all() {
-    for(int i=0; i<fights.size();i++){
-        run(fights[i].GetA(),fights[i].GetB());
+void Arena::Run_all() {
+    for(int i=0;i<fights.size();i++){
+        Run(*fights[i]);
     }
 }

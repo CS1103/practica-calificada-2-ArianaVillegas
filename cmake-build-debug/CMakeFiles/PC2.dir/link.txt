@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/PC2.dir/main.cpp.o CMakeFiles/PC2.dir/Fighter.cpp.o CMakeFiles/PC2.dir/Arena.cpp.o  -o PC2 

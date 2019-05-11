@@ -5,37 +5,27 @@
 #ifndef PC2_ARENA_H
 #define PC2_ARENA_H
 
-#include <iostream>
-#include <vector>
 #include <fstream>
-#include <sstream>
+#include <bits/stdc++.h>
+#include <cstring>
 #include "Fighter.h"
 
-class Fight{
+struct Fight{
     Fighter* A;
     Fighter* B;
-    Fighter* winner;
-    int score;
-public:
-    Fight(Fighter* A,Fighter* B):A(A),B(B),winner(nullptr),score(0){};
-    Fighter GetA(){ return *A;};
-    Fighter GetB(){ return *B;};
-    Fighter GetWinner(){ return *winner;};
-    int GetScore(){ return score;};
-    void SetWinner(Fighter* winner1){winner=winner1;};
-    void SetScore(int score1){score=score1;};
-    ~Fight(){};
+    Fighter* winner= nullptr;
+    int score=0;
 };
 
 class Arena{
-    std::vector<Fight> fights;
+    std::vector<Fight*> fights;
 public:
     Arena(){};
-    void add_fight(Fight f);
-    void run(Fighter A, Fighter B);
-    std::vector<Fight> get_fights(){ return fights;};
+    void add_fights(Fight* fight){fights.push_back(fight);};
+    void Run(Fight &fight);
+    std::vector<Fight*> get_fights(){ return fights;};
     void load_fights(std::string filename);
-    void run_all();
+    void Run_all();
 };
 
 #endif //PC2_ARENA_H
